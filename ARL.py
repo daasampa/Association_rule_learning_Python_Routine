@@ -14,7 +14,7 @@ class ARL:
             cols = list(map(lambda x: x + "==1", temp.columns))
             supp_X = list(map(lambda x: cols[x] + " and", range(len(cols))))
             supp_X = supp_X[:-1] + [supp_X[len(supp_X) - 1].replace(" and", "")]
-            return str((float(temp.where(" ".join(supp_X)).count()) / float(temp.count()))*100) + " " + "%"
+            return (float(temp.where(" ".join(supp_X)).count()) / float(temp.count()))*100
         support = pd.concat([pd.DataFrame(list(map(lambda x : iter_function(x), \
                                                    range(len(variables)))), columns = ["support"]), \
                              pd.DataFrame(variables)], axis=1).sort_values(by=["support"], \
