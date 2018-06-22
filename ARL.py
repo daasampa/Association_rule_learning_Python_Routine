@@ -1,7 +1,5 @@
-import time, rlcompleter, readline, pandas as pd
-from itertools import combinations, compress
-class ARL:    
-    def __init__(self, sql_string, n_vars):        
+class ARL:
+    def __init__(self, sql_string, n_vars):
         readline.parse_and_bind("tab: complete")
         self.n_vars = n_vars
         self.data = spark.sql(sql_string)
