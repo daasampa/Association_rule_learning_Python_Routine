@@ -5,7 +5,7 @@ This repository was published to share a simple method to verify, based on some 
 The use case of this implementation is the capability to create fraud rules, for mitigation or prevention, that eventually migrate to the **SPSS Modeler routines** how control the customers use of digital channels.\
 The procedure's foundations are easy to understand, details can be found [**here**](https://en.wikipedia.org/wiki/Association_rule_learning).
 
-This time the way to consume the Spark resources is through the Python API: [**PySpark**] (http://spark.apache.org/docs/2.2.0/api/python/index.html). The reason why is the ease of the Python language to write the program, as a _class_, that perform calculation over data represented on **pandas dataframes** using **lambda expresions**. The calculations inside the _class_ involves the **combinatorial operator** which is called from a Python module (_itertools_).
+This time the way to consume the Spark resources is through the Python API: [**PySpark**](http://spark.apache.org/docs/2.2.0/api/python/index.html). The reason why is the ease of the Python language to write the program, as a _class_, that perform calculation over data represented on **pandas dataframes** using **lambda expresions**. The calculations inside the _class_ involves the **combinatorial operator** which is called from a Python module (_itertools_).
 
 The measurements, early mentioned, are: **support** and **confidence**. Their interpretation is related to the concepts of **probability and the conditional probability**.
 
