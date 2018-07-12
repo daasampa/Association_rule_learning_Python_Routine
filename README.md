@@ -23,6 +23,9 @@ The **parameters** function calls the data, stored in **HDFS** thanks to a **Imp
 ### 4. Write results (Write_results.py): :pencil:
 Transforming the **pandas** data frame into **pyspark_sql_dataframe** using **StructField** and **StructType** methods, this function writes the results in **HDFS**. Those can be check by Impala or Hive.
 
+### 5. ARL_ETL (ARL_ETL.py): :tractor:
+A Python _class_ how performe, once all the external data is loaded into **HDFS**, the _ETL_ needed to calculate the design matrix (as an Impala table) which is the input of the whole methodology.
+
 ######  **_Considerations_**:
 ###### 1. The current way to access Spark is through **_SFTP_** connection. **MobaXterm** is an alternative to doing so. However, it has no support, indeed, it has IT restrictions.
 ###### 2. Source codes in this repository can not be executed inside the GitHub platform.
